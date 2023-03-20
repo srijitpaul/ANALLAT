@@ -1,5 +1,4 @@
 [![Actions Status](https://github.com/srijitpaul/ANALLAT/workflows/MacOS/badge.svg)](https://github.com/srijitpaul/ANALLAT/g/actions)
-[![Actions Status](https://github.com/srijitpaul/ANALLAT/workflows/Windows/badge.svg)](https://github.com/srijitpaul/modern-cpp-template/actions)
 [![Actions Status](https://github.com/srijitpaul/ANALLAT/workflows/Ubuntu/badge.svg)](https://github.com/srijitpaul/modern-cpp-template/actions)
 [![codecov](https://codecov.io/gh/srijitpaul/ANALLAT/branch/master/graph/badge.svg)](https://codecov.io/gh/srijitpaul/ANALLAT)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/srijitpaul/ANALLAT)](https://github.com/srijitpaul/ANALLAT/releases)
