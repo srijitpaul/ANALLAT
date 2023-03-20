@@ -1,21 +1,19 @@
-[![Actions Status](https://github.com/filipdutescu/modern-cpp-template/workflows/MacOS/badge.svg)](https://github.com/filipdutescu/modern-cpp-template/actions)
-[![Actions Status](https://github.com/filipdutescu/modern-cpp-template/workflows/Windows/badge.svg)](https://github.com/filipdutescu/modern-cpp-template/actions)
-[![Actions Status](https://github.com/filipdutescu/modern-cpp-template/workflows/Ubuntu/badge.svg)](https://github.com/filipdutescu/modern-cpp-template/actions)
-[![codecov](https://codecov.io/gh/filipdutescu/modern-cpp-template/branch/master/graph/badge.svg)](https://codecov.io/gh/filipdutescu/modern-cpp-template)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/filipdutescu/modern-cpp-template)](https://github.com/filipdutescu/modern-cpp-template/releases)
+[![Actions Status](https://github.com/srijitpaul/ANALLAT/workflows/MacOS/badge.svg)](https://github.com/srijitpaul/ANALLAT/g/actions)
+[![Actions Status](https://github.com/srijitpaul/ANALLAT/workflows/Windows/badge.svg)](https://github.com/srijitpaul/modern-cpp-template/actions)
+[![Actions Status](https://github.com/srijitpaul/ANALLAT/workflows/Ubuntu/badge.svg)](https://github.com/srijitpaul/modern-cpp-template/actions)
+[![codecov](https://codecov.io/gh/srijitpaul/ANALLAT/branch/master/graph/badge.svg)](https://codecov.io/gh/srijitpaul/ANALLAT)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/srijitpaul/ANALLAT)](https://github.com/srijitpaul/ANALLAT/releases)
 
-# Modern C++ Template
+# ANALLAT
 
-A quick C++ template for modern CMake projects, aimed to be an easy to use
-starting point.
+A C++ package to do a comprehensive ANALysis on the LATtice QCD measurements performed on a gauge ensemble which is generated using Markov Chain Monte Carlo simulations.   
 
-This is my personal take on such a type of template, thus I might not use the
-best practices or you might disagree with how I do things. Any and all feedback
-is greatly appreciated!
+
 
 ## Features
 
-* Modern **CMake** configuration and project, which, to the best of my
+
+<!-- * Modern **CMake** configuration and project, which, to the best of my
 knowledge, uses the best practices,
 
 * An example of a **Clang-Format** config, inspired from the base *Google* model,
@@ -50,16 +48,16 @@ template is licensed under the [Unlicense](https://unlicense.org/),
 * Options to build as a header-only library or executable, not just a static or
 shared library.
 
-* **Ccache** integration, for speeding up rebuild times
+* **Ccache** integration, for speeding up rebuild times -->
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local
-machine for development and testing purposes.
+<!-- These instructions will get you a copy of the project up and running on your local
+machine for development and testing purposes. -->
 
 ### Prerequisites
 
-This project is meant to be only a template, thus versions of the software used
+<!-- This project is meant to be only a template, thus versions of the software used
 can be change to better suit the needs of the developer(s). If you wish to use the
 template *as-is*, meaning using the versions recommended here, then you will need:
 
@@ -69,20 +67,20 @@ template *as-is*, meaning using the versions recommended here, then you will nee
 *GCC*, *Clang*
 
 > ***Note:*** *You also need to be able to provide ***CMake*** a supported
-[generator](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html).*
+[generator](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html).* -->
 
 ### Installing
 
-It is fairly easy to install the project, all you need to do is clone if from
-[GitHub](https://github.com/filipdutescu/modern-cpp-template) or
-[generate a new repository from it](https://github.com/filipdutescu/modern-cpp-template/generate)
+<!-- It is fairly easy to install the project, all you need to do is clone if from
+[GitHub](https://github.com/srijitpaul/ANALLAT/g) or
+[generate a new repository from it](https://github.com/srijitpaul/ANALLAT/g/generate)
 (also on **GitHub**).
 
 If you wish to clone the repository, rather than generate from it, you simply need
 to run:
 
 ```bash
-git clone https://github.com/filipdutescu/modern-cpp-template/
+git clone https://github.com/srijitpaul/ANALLAT/g/
 ```
 
 After finishing getting a copy of the project, with any of the methods above, create
@@ -124,11 +122,11 @@ cmake --build build --target install --config Release
 
 # a more general syntax for that command is:
 cmake --build <build_directory> --target install --config <desired_config>
-```
+``` -->
 
 ## Building the project
 
-To build the project, all you need to do, ***after correctly
+<!-- To build the project, all you need to do, ***after correctly
 [installing the project](README.md#Installing)***, is run a similar **CMake** routine
 to the the one below:
 
@@ -145,11 +143,11 @@ More options that you can set for the project can be found in the
 [`cmake/StandardSettings.cmake` file](cmake/StandardSettings.cmake). For certain
 options additional configuration may be needed in their respective `*.cmake` files
 (i.e. Conan needs the `CONAN_REQUIRES` and might need the `CONAN_OPTIONS` to be setup
-for it work correctly; the two are set in the [`cmake/Conan.cmake` file](cmake/Conan.cmake)).
+for it work correctly; the two are set in the [`cmake/Conan.cmake` file](cmake/Conan.cmake)). -->
 
 ## Generating the documentation
 
-In order to generate documentation for the project, you need to configure the build
+<!-- In order to generate documentation for the project, you need to configure the build
 to use Doxygen. This is easily done, by modifying the workflow shown above as follows:
 
 ```bash
@@ -158,11 +156,11 @@ cmake .. -D<project_name>_ENABLE_DOXYGEN=1 -DCMAKE_INSTALL_PREFIX=/absolute/path
 cmake --build . --target doxygen-docs
 ```
 
-> ***Note:*** *This will generate a `docs/` directory in the **project's root directory**.*
+> ***Note:*** *This will generate a `docs/` directory in the **project's root directory**.* -->
 
 ## Running the tests
 
-By default, the template uses [Google Test](https://github.com/google/googletest/)
+<!-- By default, the template uses [Google Test](https://github.com/google/googletest/)
 for unit testing. Unit testing can be disabled in the options, by setting the
 `ENABLE_UNIT_TESTING` (from
 [cmake/StandardSettings.cmake](cmake/StandardSettings.cmake)) to be false. To run
@@ -175,15 +173,15 @@ ctest -C Release  # or `ctest -C Debug` or any other configuration you wish to t
 
 # you can also run tests with the `-VV` flag for a more verbose output (i.e.
 #GoogleTest output as well)
-```
+``` -->
 
 ### End to end tests
 
-If applicable, should be presented here.
+<!-- If applicable, should be presented here. -->
 
 ### Coding style tests
 
-If applicable, should be presented here.
+<!-- If applicable, should be presented here. -->
 
 ## Contributing
 
@@ -194,13 +192,16 @@ become a contributor and the process for submitting pull requests to us.
 
 This project makes use of [SemVer](http://semver.org/) for versioning. A list of
 existing versions can be found in the
-[project's releases](https://github.com/filipdutescu/modern-cpp-template/releases).
+[project's releases](https://github.com/srijitpaul/ANALLAT/g/releases).
 
 ## Authors
 
-* **Filip-Ioan Dutescu** - [@filipdutescu](https://github.com/filipdutescu)
+* **Srijit Paul** - [@srijitpaul](https://github.com/srijitpaul)
 
 ## License
 
-This project is licensed under the [Unlicense](https://unlicense.org/) - see the
-[LICENSE](LICENSE) file for details
+<!-- This project is licensed under the [Unlicense](https://unlicense.org/) - see the
+[LICENSE](LICENSE) file for details -->
+
+
+[def]: https://codecov.io/gh/srijitpaul/ANALLAT/branch/master/graph/badge.svg
