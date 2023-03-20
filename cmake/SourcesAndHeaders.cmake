@@ -8,7 +8,7 @@ set(exe_sources
 )
 
 set(headers
-    include/ANALLAT/tmp.hpp
+    include/anallat/tmp.hpp
 )
 
 set(test_sources
