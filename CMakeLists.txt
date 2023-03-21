@@ -51,8 +51,8 @@ endif()
 # Enable package managers
 #
 
-include(cmake/Conan.cmake)
-include(cmake/Vcpkg.cmake)
+#include(cmake/Conan.cmake)
+#include(cmake/Vcpkg.cmake)
 
 #
 # Create library, setup header and source files
