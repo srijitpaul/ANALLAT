@@ -1,4 +1,5 @@
 #include "anallat/tmp.hpp"
+#include "anallat/ANALLAT.hpp"
 
 #include <gtest/gtest.h>
 
