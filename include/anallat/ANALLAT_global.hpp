@@ -25,20 +25,20 @@
 #include <stack>
 #include <complex>
 //======== Preprocessor macros =========//
-//#include <global/ANALLAT_macros.h>
+#include "global/ANALLAT_macros.hpp"
 
 //======== Containers ===============//
 //#include <global/ANALLAT_xtensor.h>
 
 //======== Utilities ================//
-//#include <global/ANALLAT_utilities.h>
+#include "global/ANALLAT_utilities.hpp"
 
 namespace anallat {
 //======== ANALLAT_printf, ANALLAT_error, ANALLAT_warning =========//
-//#include <global/ANALLAT_prints.h>
+#include "global/ANALLAT_prints.hpp"
 
 //======== Enumerations =========//
-//#include <global/ANALLAT_enums.h>
+#include "global/ANALLAT_enums.hpp"
 
 //======== Global constants =========//
 //#include <ANALLAT_global_constants.h>
