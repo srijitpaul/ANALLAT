@@ -31,7 +31,7 @@
 //#include <global/ANALLAT_xtensor.h>
 
 //======== Utilities ================//
-#include "global/ANALLAT_utilities.hpp"
+//#include "global/ANALLAT_utilities.hpp"
 
 namespace anallat {
 //======== ANALLAT_printf, ANALLAT_error, ANALLAT_warning =========//

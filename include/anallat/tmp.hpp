@@ -1,6 +1,6 @@
 #ifndef TMP_TMP_H_
 #define TMP_TMP_H_
-#include "anallat/ANALLAT.hpp"
+#include "ANALLAT.hpp"
 
 namespace tmp
 {
