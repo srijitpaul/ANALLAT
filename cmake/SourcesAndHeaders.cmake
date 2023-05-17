@@ -10,7 +10,7 @@ set(exe_sources
 set(headers
     include/anallat/tmp.hpp
     include/anallat/ANALLAT.hpp
-    include/anallat/ANALLAT_global.hpp
+    include/anallat/ANALLAT_global_includes.hpp
 )
 
 set(test_sources

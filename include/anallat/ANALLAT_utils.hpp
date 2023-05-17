@@ -9,14 +9,14 @@
 //----------ANALLAT_utils.cpp---------------//
 void initializeOptions(int argc, char **argv);
 
-void rotatedGEVPOptions(int argc, char **argv);
+//void rotatedGEVPOptions(int argc, char **argv);
 
-void dispersionrelOptions(int argc, char **argv);
+//void dispersionrelOptions(int argc, char **argv);
 
-void resamplingOptions(int argc, char **argv);
+//void resamplingOptions(int argc, char **argv);
 
-void initializeANALLAT();
+//void initializeANALLAT();
 
-void finalizeANALLAT();
+//void finalizeANALLAT();
 
 #endif  // ANALLAT_UTILS_H_

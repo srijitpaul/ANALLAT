@@ -1,4 +1,6 @@
-#pragma once
+#ifndef ANALLAT_GLOBAL_INCLUDES_HPP
+#define ANALLAT_GLOBAL_INCLUDES_HPP
+
 //======== External libraries =========//
 #include <typeinfo>
 #include <typeindex>
@@ -41,9 +43,11 @@ namespace anallat {
 #include "global/ANALLAT_enums.hpp"
 
 //======== Global constants =========//
-//#include <ANALLAT_global_constants.h>
+#include "global/ANALLAT_global_constants.hpp"
 
 
 }
 
 using namespace anallat; // TODO: This one shouldn't be here.. But helps avoiding missing namespace.
+
+#endif
