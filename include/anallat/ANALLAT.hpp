@@ -2,6 +2,7 @@
 #define ANALLAT_H_
 
 #include "ANALLAT_global.hpp"
+#include "tmp.hpp"
 //#include <ANALLAT_io.h>
 //#include <ANALLAT_Correlator.h>
 //#include <ANALLAT_Corr_single.h>

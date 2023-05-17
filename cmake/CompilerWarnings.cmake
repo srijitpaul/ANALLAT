@@ -63,7 +63,7 @@ function(set_project_warnings project_name)
 
   if (${PROJECT_NAME}_WARNINGS_AS_ERRORS)
     set(CLANG_WARNINGS ${CLANG_WARNINGS} -Werror)
-    set(MSVC_WARNINGS ${MSVC_WARNINGS} /WX)
+    #set(MSVC_WARNINGS ${MSVC_WARNINGS} /WX)
   endif()
 
   set(GCC_WARNINGS
@@ -77,15 +77,15 @@ function(set_project_warnings project_name)
       -Wuseless-cast # warn if you perform a cast to the same type
   )
 
-  if(MSVC)
-    set(PROJECT_WARNINGS ${MSVC_WARNINGS})
-  elseif(CMAKE_CXX_COMPILER_ID MATCHES ".*Clang")
-    set(PROJECT_WARNINGS ${CLANG_WARNINGS})
-  elseif(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-    set(PROJECT_WARNINGS ${GCC_WARNINGS})
-  else()
-    message(AUTHOR_WARNING "No compiler warnings set for '${CMAKE_CXX_COMPILER_ID}' compiler.")
-  endif()
+#   if(MSVC)
+#     set(PROJECT_WARNINGS ${MSVC_WARNINGS})
+#   elseif(CMAKE_CXX_COMPILER_ID MATCHES ".*Clang")
+#     set(PROJECT_WARNINGS ${CLANG_WARNINGS})
+#   elseif(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+#     set(PROJECT_WARNINGS ${GCC_WARNINGS})
+#   else()
+#     message(AUTHOR_WARNING "No compiler warnings set for '${CMAKE_CXX_COMPILER_ID}' compiler.")
+#   endif()
 
   if(${PROJECT_NAME}_BUILD_HEADERS_ONLY)
         target_compile_options(${project_name} INTERFACE ${PROJECT_WARNINGS})

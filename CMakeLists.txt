@@ -1,11 +1,10 @@
 cmake_minimum_required(VERSION 3.15)
 
 #
-# Project details
+# Project details : Name, version number (major, minor, patch) and language
 #
-
 project(
-    "ANALLAT"
+  "ANALLAT"
   VERSION 0.1.0
   LANGUAGES CXX
 )
@@ -13,7 +12,6 @@ project(
 #
 # Set project options
 #
-
 include(cmake/StandardSettings.cmake)
 include(cmake/StaticAnalyzers.cmake)
 include(cmake/Utils.cmake)
@@ -203,7 +201,7 @@ target_link_libraries(
 #
 # On Linux and Mac this variable is ignored. If any issues rise from it, try commenting it out
 # and letting CMake decide how to link with it.
-set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
+#set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
 
 verbose_message("Successfully added all dependencies and linked against them.")
 

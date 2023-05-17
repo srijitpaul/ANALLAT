@@ -1,6 +1,5 @@
-#ifndef TMP_TMP_H_
-#define TMP_TMP_H_
-#include "ANALLAT.hpp"
+#ifndef TMP_H_
+#define TMP_H_
 
 namespace tmp
 {
@@ -8,4 +7,4 @@ namespace tmp
 }
 
 
-#endif  // TMP_TMP_H_
+#endif  // TMP_H_
