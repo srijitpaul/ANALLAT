@@ -14,8 +14,7 @@
 //#include <Physics/ANALLAT_Phase_shift.h>
 
 namespace anallat {
-
-  
+ 
   void ANALLAT_init();
   
   void ANALLAT_status();

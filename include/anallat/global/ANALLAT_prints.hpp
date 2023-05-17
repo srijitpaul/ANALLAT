@@ -3,46 +3,52 @@
  * inspired by QUDA
  */
 
-#pragma once
+#ifndef ANALLAT_PRINTS_H_
+#define ANALLAT_PRINTS_H_
 
-extern bool ANALLAT_init_flag;
-extern bool ANALLAT_hold_exit;
+#include <cstddef>
+#include <iostream>
+#include <cstdio>
+#include <array>
 
-static const size_t MAX_PREFIX_SIZE = 100;
+extern const bool ANALLAT_init_flag;
+extern const bool ANALLAT_hold_exit;
 
-static char prefix_[MAX_PREFIX_SIZE] = "";
-static FILE *outfile_ = stdout;
+constexpr size_t MAX_PREFIX_SIZE = 100;
+constexpr size_t MAX_BUFFER_SIZE = 1000;
 
-static const int MAX_BUFFER_SIZE = 1000;
-static char buffer_[MAX_BUFFER_SIZE] = "";
+const static std::array<char, MAX_PREFIX_SIZE> prefix_{};
+const static std::FILE* const outfile_ = stdout;
+const static std::array<char, MAX_BUFFER_SIZE> buffer_{};
 
-static inline char *getOutputPrefix() { return prefix_; }
-static inline FILE *getOutputFile() { return outfile_; }
-static inline char *getPrintBuffer() { return buffer_; }
+static inline const char* getOutputPrefix() { return prefix_.data(); }
+static inline const std::FILE* getOutputFile() { return outfile_; }
+static inline const char* getPrintBuffer() { return buffer_.data(); }
 
-#define ANALLAT_error(...) do {						\
-    ANALLAT_hold_exit = true;						\
-    fprintf(getOutputFile(), "%sERROR: ", getOutputPrefix());		\
-    fprintf(getOutputFile(), __VA_ARGS__);				\
-    fflush(getOutputFile());						\
-    ANALLAT_hold_exit = false;						\
+#define ANALLAT_error(...) do {                                     \
+    ANALLAT_hold_exit = true;                                       \
+    std::fprintf(getOutputFile(), "%sERROR: ", getOutputPrefix());  \
+    std::fprintf(getOutputFile(), __VA_ARGS__);                     \
+    std::fflush(getOutputFile());                                   \
+    ANALLAT_hold_exit = false;                                      \
 } while(0)
 
-#define ANALLAT_printf(...) do {						\
-    printf(__VA_ARGS__);                    \
-    fflush(getOutputFile());                           \
-    sprintf(getPrintBuffer(), __VA_ARGS__);				\
-  } while(0)
+#define ANALLAT_printf(...) do {                                    \
+    std::printf(__VA_ARGS__);                                       \
+    std::fflush(getOutputFile());                                   \
+    std::sprintf(getPrintBuffer(), __VA_ARGS__);                    \
+} while(0)
 
-#define ANALLAT_warning(...) do {					\
-    if (ANALLAT_init_flag) {						\
-        sprintf(getPrintBuffer(), __VA_ARGS__);				\
-        fprintf(getOutputFile(), "%sWARNING: ", getOutputPrefix());	\
-        fprintf(getOutputFile(), "%s", getPrintBuffer());		\
-        fprintf(getOutputFile(), "\n");				\
-        fflush(getOutputFile());					\
-}   else {								\
-        printf("WARNING: ");						\
-        printf(__VA_ARGS__);						\
-}									\
+#define ANALLAT_warning(...) do {                                   \
+    if (ANALLAT_init_flag) {                                        \
+        std::sprintf(getPrintBuffer(), __VA_ARGS__);                \
+        std::fprintf(getOutputFile(), "%sWARNING: ", getOutputPrefix()); \
+        std::fprintf(getOutputFile(), "%s", getPrintBuffer());      \
+        std::fprintf(getOutputFile(), "\n");                        \
+        std::fflush(getOutputFile());                               \
+    } else {                                                        \
+        std::cout << "WARNING: " << __VA_ARGS__ << std::endl;       \
+    }                                                               \
 } while (0)
+
+#endif  // ANALLAT_PRINTS_H_

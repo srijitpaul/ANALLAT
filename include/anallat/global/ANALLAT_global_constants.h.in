@@ -1,7 +1,0 @@
-/*
- *Adding Global constants
- */
-#pragma once 
-
-extern int ANALLAT_verbosity;
-

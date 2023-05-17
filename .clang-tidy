@@ -1,4 +1,4 @@
-Checks: '*,-google-*,-modernize-use-trailing-return-type,-llvm-*,-llvmlibc-*'
+Checks: '*,-google-*,-modernize-use-trailing-return-type,-llvm-*,-llvmlibc-*,-cppcoreguidelines-macro-usage'
 CheckOptions: [{ key: misc-non-private-member-variables-in-classes, value: IgnoreClassesWithAllMemberVariablesBeingPublic }]
 WarningsAsErrors: true
 HeaderFilterRegex: ''

@@ -1,7 +1,7 @@
-# Contributing to [INSERT PROJECT NAME]
+# Contributing to ANALLAT
 
-The [INSERT PROJECT NAME] team encourages community feedback and contributions.
-Thank you for your interest in making [INSERT PROJECT NAME] better! There are several
+The ANALLAT team encourages community feedback and contributions.
+Thank you for your interest in making ANALLAT better! There are several
 ways you can get involved.
 
 If you are looking for a good way to contribute to the project, please:

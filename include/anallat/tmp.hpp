@@ -3,7 +3,7 @@
 
 namespace tmp
 {
-  int add(int, int);
+  int add(int abc, int def);
 }
 
 #endif  // TMP_H_
