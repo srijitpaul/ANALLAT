@@ -6,5 +6,4 @@ namespace tmp
   int add(int, int);
 }
 
-
 #endif  // TMP_H_
