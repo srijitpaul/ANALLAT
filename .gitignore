@@ -4,6 +4,12 @@ CMakeCache.*
 CMakeFiles/*
 [Tt]esting/*
 
+###Clion files###
+cmake-build-debug/*
+cmake-build-release/*
+cmake-build-*
+.idea/*
+
 ### VisualStudioCode ###
 .vscode/*
 .vscode/settings.json
