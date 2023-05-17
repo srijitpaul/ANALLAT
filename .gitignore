@@ -3,6 +3,8 @@
 CMakeCache.*
 CMakeFiles/*
 [Tt]esting/*
+compile_commands.json
+test/compile_commands.json
 
 ###Clion files###
 cmake-build-debug/*
