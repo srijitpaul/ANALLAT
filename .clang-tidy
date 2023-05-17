@@ -1,5 +1,5 @@
-#Checks: '*,-google-*,-modernize-use-trailing-return-type,-llvm-*,-llvmlibc-*'
-#CheckOptions: [{ key: misc-non-private-member-variables-in-classes, value: IgnoreClassesWithAllMemberVariablesBeingPublic }]
+Checks: '*,-google-*,-modernize-use-trailing-return-type,-llvm-*,-llvmlibc-*'
+CheckOptions: [{ key: misc-non-private-member-variables-in-classes, value: IgnoreClassesWithAllMemberVariablesBeingPublic }]
 WarningsAsErrors: true
 HeaderFilterRegex: ''
 FormatStyle: none
