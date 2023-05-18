@@ -1,8 +1,8 @@
 #ifndef ANALLAT_H_
 #define ANALLAT_H_
 
-#include "ANALLAT_global_includes.hpp"
 #include "tmp.hpp"
+#include "ANALLAT_utils.hpp"
 //#include <ANALLAT_io.h>
 //#include <ANALLAT_Correlator.h>
 //#include <ANALLAT_Corr_single.h>

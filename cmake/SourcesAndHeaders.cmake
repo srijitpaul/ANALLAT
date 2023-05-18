@@ -11,6 +11,7 @@ set(headers
     include/anallat/tmp.hpp
     include/anallat/ANALLAT.hpp
     include/anallat/ANALLAT_global_includes.hpp
+    include/anallat/ANALLAT_utils.hpp
 )
 
 set(test_sources

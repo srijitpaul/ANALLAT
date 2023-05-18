@@ -3,19 +3,19 @@
 
 #include <iostream>
 #include <array>
+#include <string>
 
 //Common Parameters
-extern const int          verbosity;
-extern const std::string  project;
-extern const size_t       dimensions;
-extern const std::string  theory;
-extern const std::string  description;
-extern const std::string  collab;
-extern const std::string  action;
-extern const std::string  analysis_type;
-extern const std::string  method;
-extern const std::string  input_path;
-extern const std::string  output_path;
+extern const int          verbosity; // Verbosity level of the program
+extern const std::string  project; // Name of the project.
+extern const int          project_year; // Year of the project: {"2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"}
+extern const size_t       dimensions; // Number of dimensions of the lattice: {1, 2, 3, 4}
+extern const std::string  theory; // Name of the theory:{"QCD", "QED", "QCD+QED", "Scalar", "XY"}
+extern const std::string  description;// Description of the project
+extern const std::string  analysis_type;// Analysis type:{"Spectrum", "DispersionRelation", "ScatteringPhaseShift", "ThreePointFunction", "TwoPointFunction", "AutoCorrelation"}
+extern const std::string  method;// Method:{"GEVP", "RotatedGEVP", "RatioMethod", "Bootstrap", "Jackknife", "Fit", "FitRatio", "FitDispersionRelation", "FitScatteringPhaseShift", "FitThreePointFunction", "FitTwoPointFunction", "FitAutoCorrelation"}
+extern const std::string  input_path;// Path to the input files
+extern const std::string  output_path;// Path to the output files
 
 // //Lattice specific parameters
 // extern const std::string  ensemble;

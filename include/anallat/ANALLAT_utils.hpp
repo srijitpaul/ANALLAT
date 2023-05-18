@@ -1,13 +1,14 @@
 #ifndef ANALLAT_UTILS_H_
 #define ANALLAT_UTILS_H_
 
+#include "ANALLAT_global_includes.hpp"
 #include "utils/ANALLAT_commandline_helpers.hpp"
 
 //using namespace anallat;
 
 
 //----------ANALLAT_utils.cpp---------------//
-void initializeOptions(int argc, char **argv);
+void initializeCommonOptions(int argc, char **argv);
 
 //void rotatedGEVPOptions(int argc, char **argv);
 

@@ -1,0 +1,10 @@
+#ifndef ANALLAT_COMPILETIME_CONSTANTS_HPP_
+#define ANALLAT_COMPILETIME_CONSTANTS_HPP_
+
+# include <cstddef> // for size_t
+
+// Monte Carlo Constants
+extern const size_t Nconfigs;
+extern const size_t Tdim;
+
+#endif  // ANALLAT_COMPILETIME_CONSTANTS_HPP_
