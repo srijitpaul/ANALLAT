@@ -1,13 +1,11 @@
 #ifndef ANALLAT_COMPILETIME_CONSTANTS_HPP
 #define ANALLAT_COMPILETIME_CONSTANTS_HPP
 
-# include <cstddef> // for size_t
-
 namespace anallat {
 
     //======== Compile time constants =========//
-    constexpr size_t Nconfigs = @NCONFIG@;
-    constexpr size_t Tdim = @TDIM@;
+    constexpr size_t Nconfigs = @NCONFIGS@; //NOLINT
+    constexpr size_t Tdim = @TDIM@; //NOLINT
 
 }
 

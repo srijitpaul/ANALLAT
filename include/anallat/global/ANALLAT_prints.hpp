@@ -3,8 +3,8 @@
  * inspired by QUDA
  */
 
-#ifndef ANALLAT_PRINTS_H_
-#define ANALLAT_PRINTS_H_
+#ifndef ANALLAT_PRINTS_HPP
+#define ANALLAT_PRINTS_HPP
 
 #include <cstddef>
 #include <iostream>

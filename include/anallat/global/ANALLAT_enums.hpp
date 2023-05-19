@@ -1,9 +1,11 @@
-
+#ifndef ANALLAT_ENUMS_HPP
+#define ANALLAT_ENUMS_HPP
 //===================//
 // ANALLAT_enum      //
 //===================//
 
 // Common Parameters Need to be Set by the User
+enum class OptionsType {CommonOptions, SpectrumOptions};
 enum class Theory {QCD, QED, QCD_QED, Scalar, XY};
 enum class Collaboration {Cyprus, Mainz, Edinburgh, USQCD, LHPC_Cyprus};
 enum class Action {Wilson_Clover, Mobius, Twisted_Mass, Staggered, Overlap, Wilson};
@@ -18,3 +20,5 @@ enum class WHICHPARTICLE{PROTON, NEUTRON, BARYON, DIBARYON, PION, CURRENT};
 enum class RESAMPLE_TYPE{BOOTSTRAP, JACKKNIFE};
 enum class FITMODEL{LINEAR, LOGLINEAR, EXPONENTIAL, TWO_EXPONENTIAL};
 enum class FITTYPE{RATIO, DISPERSION, SCATTERING, THREEPT, TWOPT, AUTOCORRELATION};
+
+#endif // ANALLAT_ENUMS_HPP

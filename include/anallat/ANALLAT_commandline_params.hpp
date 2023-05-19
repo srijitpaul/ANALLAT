@@ -4,14 +4,26 @@
 #include <iostream>
 #include <string>
 #include <array>
+#include <utility>
+#include "externals/nlohmann/json.hpp"
 #include "externals/CLI/CLI11.hpp"
-#include "externals/nlohmann/json_fwd.hpp"
+#include "ANALLAT_global_includes.hpp"
 
-class ANALLAT_commandline_params : public CLI::App
-{
-    // public:
-    // ANALLAT_commandline_params(std::string app_description = "", std::string app_name = "") : CLI::App(app_description, app_name) {};
-    // virtual ~ANALLAT_commandline_params() {};
-    
+using json = nlohmann::json;
+using option = CLI::App;
+
+BEGIN_ANALLAT_NAMESPACE
+
+class ConfigParser {
+
+private:
+    json config_;
+    std::string CommonConfigPath = "DefaultCommonPath";
+
+public:
+    bool ParseConfig();
+    std::shared_ptr<option> MakeOptions(const std::string& AppDescription="ANALLAT Common Options which is global to sub-projects", const std::string& AppName="ANALLAT Common Options");
 };
-#endif  // _ANALLAT_COMMANDLINE_PARAMS_HPP
+
+END_ANALLAT_NAMESPACE
+#endif // ANALLAT_COMMANDLINE_PARAMS_HPP

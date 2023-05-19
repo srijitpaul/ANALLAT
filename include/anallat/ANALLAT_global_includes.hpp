@@ -10,10 +10,9 @@
 #include <array>
 #include <algorithm>
 
-//#ifdef __GNUG__ // gnu C++ compiler
-//#include <cxxabi.h>
-//#include <stdlib.h>
-//#endif
+#ifdef __GNUG__ // gnu C++ compiler
+#include <cxxabi.h>
+#endif
 
 #include <new> // for availability of std::bad_alloc exception
 #include <string>
@@ -29,24 +28,23 @@
 //======== Preprocessor macros =========//
 #include "global/ANALLAT_macros.hpp"
 
+BEGIN_ANALLAT_NAMESPACE
 //======== Containers ===============//
 //#include <global/ANALLAT_xtensor.h>
 
 //======== Utilities ================//
 //#include "global/ANALLAT_utilities.hpp"
 
-namespace anallat {
+//======== Compile-Time constants =========//
+#include "global/ANALLAT_compiletime_constants.hpp"
+
 //======== ANALLAT_printf, ANALLAT_error, ANALLAT_warning =========//
 #include "global/ANALLAT_prints.hpp"
 
 //======== Enumerations =========//
 #include "global/ANALLAT_enums.hpp"
 
-//======== Global constants =========//
-#include "global/ANALLAT_global_constants.hpp"
-
-
-}
+END_ANALLAT_NAMESPACE
 
 using namespace anallat; // TODO: This one shouldn't be here.. But helps avoiding missing namespace.
 

@@ -56,7 +56,27 @@ endif()
 # Create library, setup header and source files
 #
 
+ #
+ # Add compiletime header
+ #
+ set(NCONFIGS 100 CACHE STRING "Number of configurations to be used in the compiletime header")
+ set(TDIM 96 CACHE STRING "Time Dimensions to be used in the compiletime header")
+ configure_file(
+   include/${PROJECT_NAME_LOWERCASE}/global/ANALLAT_compiletime_constants.hpp.in
+   include/${PROJECT_NAME_LOWERCASE}/global/ANALLAT_compiletime_constants.hpp
+   @ONLY
+ )
+ verbose_message("Configured the compiletime constants header in ${CMAKE_CURRENT_BINARY_DIR}/include/${PROJECT_NAME_LOWERCASE}.\n")
+ install(
+   FILES
+   ${CMAKE_CURRENT_BINARY_DIR}/include/${PROJECT_NAME_LOWERCASE}/global/ANALLAT_compiletime_constants.hpp
+   DESTINATION
+   include/${PROJECT_NAME_LOWERCASE}/global
+ )
+
+
 # Find all headers and implementation files
+include_directories(${CMAKE_CURRENT_BINARY_DIR}/include/${PROJECT_NAME_LOWERCASE})
 include(cmake/SourcesAndHeaders.cmake)
 
 if(${PROJECT_NAME}_BUILD_EXECUTABLE)
@@ -93,7 +113,7 @@ else()
     ${PROJECT_NAME}
     ${headers}
     ${sources}
-  )
+          utils/ANALLAT_commandline_params.cpp utils/ANALLAT_utils.cpp)
 
   if(${PROJECT_NAME}_VERBOSE_OUTPUT)
     verbose_message("Found the following sources:")

@@ -1,5 +1,5 @@
-#ifndef ANALLAT_H_
-#define ANALLAT_H_
+#ifndef ANALLAT_HPP
+#define ANALLAT_HPP
 
 #include "tmp.hpp"
 #include "ANALLAT_utils.hpp"
@@ -13,7 +13,7 @@
 //#include <Statistical/ANALLAT_Fitdata.h>
 //#include <Physics/ANALLAT_Phase_shift.h>
 
-namespace anallat {
+BEGIN_ANALLAT_NAMESPACE
  
   void ANALLAT_init();
   
@@ -21,5 +21,5 @@ namespace anallat {
   
   void ANALLAT_end();
   
-}
+END_ANALLAT_NAMESPACE
 #endif
