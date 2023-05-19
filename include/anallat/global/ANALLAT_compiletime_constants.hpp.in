@@ -1,10 +1,14 @@
-#ifndef ANALLAT_COMPILETIME_CONSTANTS_HPP_
-#define ANALLAT_COMPILETIME_CONSTANTS_HPP_
+#ifndef ANALLAT_COMPILETIME_CONSTANTS_HPP
+#define ANALLAT_COMPILETIME_CONSTANTS_HPP
 
 # include <cstddef> // for size_t
 
-// Monte Carlo Constants
-extern const size_t Nconfigs;
-extern const size_t Tdim;
+namespace anallat {
 
-#endif  // ANALLAT_COMPILETIME_CONSTANTS_HPP_
+    //======== Compile time constants =========//
+    constexpr size_t Nconfigs = @NCONFIG@;
+    constexpr size_t Tdim = @TDIM@;
+
+}
+
+#endif  // ANALLAT_COMPILETIME_CONSTANTS_HPP
