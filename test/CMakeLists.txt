@@ -77,7 +77,7 @@ foreach(file ${test_sources})
     NAME
       ${test_name}
     COMMAND
-      ${test_name}_Tests --common-config="TestConfigPath"
+      ${test_name}_Tests --global-config=${CMAKE_SOURCE_DIR}/test/src/input/common_options.json --montecarlo-config=${CMAKE_SOURCE_DIR}/test/src/input/mc_options.json
   )
 endforeach()
 

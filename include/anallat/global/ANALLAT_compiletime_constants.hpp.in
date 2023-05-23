@@ -4,7 +4,7 @@
 namespace anallat {
 
     //======== Compile time constants =========//
-    constexpr size_t Nconfigs = @NCONFIGS@; //NOLINT
+    constexpr size_t Nresamples = @NRESAMPLES@; //NOLINT
     constexpr size_t Tdim = @TDIM@; //NOLINT
 
 }

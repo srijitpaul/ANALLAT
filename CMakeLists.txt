@@ -56,12 +56,12 @@ endif()
 # Create library, setup header and source files
 #
 
- #
- # Add compiletime header
- #
- set(NCONFIGS 100 CACHE STRING "Number of configurations to be used in the compiletime header")
- set(TDIM 96 CACHE STRING "Time Dimensions to be used in the compiletime header")
- configure_file(
+#
+# Add compiletime header
+#
+set(TDIM 96 CACHE STRING "Time Dimensions to be used in the compiletime header")
+set(NRESAMPLES 100 CACHE STRING "Number of Resamples")
+configure_file(
    include/${PROJECT_NAME_LOWERCASE}/global/ANALLAT_compiletime_constants.hpp.in
    include/${PROJECT_NAME_LOWERCASE}/global/ANALLAT_compiletime_constants.hpp
    @ONLY
@@ -112,8 +112,7 @@ else()
   add_library(
     ${PROJECT_NAME}
     ${headers}
-    ${sources}
-          utils/ANALLAT_commandline_params.cpp utils/ANALLAT_utils.cpp)
+    ${sources})
 
   if(${PROJECT_NAME}_VERBOSE_OUTPUT)
     verbose_message("Found the following sources:")
@@ -149,6 +148,23 @@ message(STATUS "Added all header and implementation files.\n")
 #
 # Set the project standard and warnings
 #
+# Define a CMake variable for the preprocessor macro
+#set(SPECTRUM "SPECTRUM" CACHE STRING "Description of Spectrum")
+#
+## Add an option to the CMake GUI to allow the user to set the macro value
+#option(ANALYSISTYPE "Use user-defined macro" OFF)
+#
+## Check if the user wants to use a custom macro
+#if (USE_ANALYSISTYPE)
+#  # Prompt the user to enter a value for the macro
+#  set(ANALYSISTYPE "${SPECTRUM}" CACHE STRING "Value of ANALYSIS_TYPE")
+#else ()
+#  # Use the default value for the macro
+#  set(ANALYSISTYPE "${SPECTRUM}")
+#endif ()
+#
+## Add the preprocessor macro definition
+#add_compile_definitions(ANALYSISTYPE="${SPECTRUM}")
 
 if(${PROJECT_NAME}_BUILD_HEADERS_ONLY)
   target_compile_features(${PROJECT_NAME} INTERFACE cxx_std_17)

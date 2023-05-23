@@ -5,9 +5,7 @@
 #include <string>
 #include <array>
 #include <utility>
-#include "externals/nlohmann/json.hpp"
-#include "externals/CLI/CLI11.hpp"
-#include "ANALLAT_global_includes.hpp"
+#include "anallat/ANALLAT_global_includes.hpp"
 
 using json = nlohmann::json;
 using option = CLI::App;
@@ -18,11 +16,27 @@ class ConfigParser {
 
 private:
     json config_;
-    std::string CommonConfigPath = "DefaultCommonPath";
+    std::string GlobalConfigPath = "DefaultConfigPath";
+    std::string MonteCarloConfigPath = "DefaultMCConfigPath";
+    std::string SpectrumConfigPath = "DefaultSpectrumConfigPath";
+    std::string OptionName;
+    std::string OptionDescription;
+    anallat_options::anallat_param_t anallat_global_param;
+
+    //Templated function to Set Options
+    template<OptionsType Opt> void SetOptions();
 
 public:
-    bool ParseConfig();
-    std::shared_ptr<option> MakeOptions(const std::string& AppDescription="ANALLAT Common Options which is global to sub-projects", const std::string& AppName="ANALLAT Common Options");
+    ConfigParser();
+
+    //Parse Compulsory Configs
+    bool ParseGlobalConfig();
+    bool ParseMonteCarloConfig();
+    bool ParseSpectrumConfig();
+    std::shared_ptr<option> MakeOptions(const std::string &AppDescription="ANALLAT Common Options which is global to sub-projects", const std::string &AppName="ANALLAT Common Options");
+    //accessors
+    anallat_options::anallat_param_t GetAnallatParam(){return anallat_global_param;}
+    std::string getSpectrumConfigPath(){return SpectrumConfigPath;}
 };
 
 END_ANALLAT_NAMESPACE

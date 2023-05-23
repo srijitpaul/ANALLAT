@@ -1,0 +1,9 @@
+{
+  "ensemble": "E250",
+  "boundary": "PERIODIC",
+  "Nconf_per_replica": [100],
+  "collab": "Edinburgh",
+  "action": "Wilson-Clover",
+  "special_configs": [[]],
+  "nstep_configs": 1
+}

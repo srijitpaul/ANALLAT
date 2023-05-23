@@ -9,7 +9,7 @@ TEST(TmpAddTest, CheckValues)
 
 int main(int argc, char **argv)
 {
-    initializeCommonOptions(argc, argv);
+    InitializeOptions(argc, argv);
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }

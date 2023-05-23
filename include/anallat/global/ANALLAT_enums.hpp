@@ -5,7 +5,7 @@
 //===================//
 
 // Common Parameters Need to be Set by the User
-enum class OptionsType {CommonOptions, SpectrumOptions};
+enum class OptionsType {CommonOptions, MonteCarloOptions, SpectrumOptions};
 enum class Theory {QCD, QED, QCD_QED, Scalar, XY};
 enum class Collaboration {Cyprus, Mainz, Edinburgh, USQCD, LHPC_Cyprus};
 enum class Action {Wilson_Clover, Mobius, Twisted_Mass, Staggered, Overlap, Wilson};

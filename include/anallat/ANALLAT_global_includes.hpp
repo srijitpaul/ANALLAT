@@ -25,8 +25,32 @@
 #include <unordered_map>
 #include <stack>
 #include <complex>
+
+//======= External Libraries ===========//
+#include "externals/nlohmann/json.hpp"
+#include "externals/CLI/CLI11.hpp"
+
+
 //======== Preprocessor macros =========//
 #include "global/ANALLAT_macros.hpp"
+
+//======== User Input Options ==========//
+BEGIN_OPTIONS_NAMESPACE
+
+#include "global/ANALLAT_global_options.hpp"
+#include "global/ANALLAT_montecarlo_options.hpp"
+#include "global/ANALLAT_spectrum_options.hpp"
+
+const size_t ALIGNMENT_SIZE = 128;
+
+using anallat_param_t = struct {
+    struct GlobalOptions GlobalOpt;
+    struct MonteCarloOptions MCOpt;
+    struct SpectrumOptions SpectrumOpt;
+} __attribute__((aligned(ALIGNMENT_SIZE)));
+
+extern anallat_param_t anallat_global_param ;//NOLINT
+END_OPTIONS_NAMESPACE
 
 BEGIN_ANALLAT_NAMESPACE
 //======== Containers ===============//

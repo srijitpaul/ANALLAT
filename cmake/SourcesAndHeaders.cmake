@@ -1,6 +1,7 @@
 set(sources
     	src/tmp.cpp
 		utils/ANALLAT_commandline_params.cpp
+		utils/ANALLAT_utils.cpp
 )
 
 set(exe_sources
@@ -14,6 +15,9 @@ set(headers
     	include/anallat/ANALLAT_global_includes.hpp
     	include/anallat/ANALLAT_utils.hpp
 		include/anallat/ANALLAT_commandline_params.hpp
+		include/anallat/global/ANALLAT_global_options.hpp
+		include/anallat/global/ANALLAT_montecarlo_options.hpp
+		include/anallat/global/ANALLAT_spectrum_options.hpp
 		include/anallat/global/ANALLAT_enums.hpp
 		include/anallat/global/ANALLAT_macros.hpp
 		include/anallat/global/ANALLAT_prints.hpp

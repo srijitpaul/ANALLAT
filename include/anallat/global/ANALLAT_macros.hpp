@@ -4,6 +4,11 @@
 #define BEGIN_ANALLAT_NAMESPACE \
 namespace anallat {
 #define END_ANALLAT_NAMESPACE }
+
+#define BEGIN_OPTIONS_NAMESPACE \
+namespace anallat_options {
+#define END_OPTIONS_NAMESPACE }
+
 // IS_EMPTY: Macro which says if __VA_ARGS__ is empty
 // NOTE: based on the: http://gustedt.wordpress.com/2010/06/08/detect-empty-macro-arguments
 // #define __ARG16(_0, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, _12, _13, _14, _15, ...) _15

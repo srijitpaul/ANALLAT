@@ -5,10 +5,10 @@
 
 BEGIN_ANALLAT_NAMESPACE
 
-void initializeCommonOptions(int argc, char **argv){
+void InitializeOptions(int argc, char **argv){
 
-    ConfigParser CommonOptionsParser;
-    auto opt = CommonOptionsParser.MakeOptions();
+    ConfigParser OptionsParser;
+    auto opt = OptionsParser.MakeOptions();
     try {
         opt->parse(argc, argv);
     }
@@ -16,7 +16,15 @@ void initializeCommonOptions(int argc, char **argv){
         opt->exit(e);
     }
     std::cout<<opt->config_to_str(true, true);
-    CommonOptionsParser.ParseConfig();
+    OptionsParser.ParseGlobalConfig();
+    OptionsParser.ParseMonteCarloConfig();
+    if(isValidFile(OptionsParser.getSpectrumConfigPath())) {
+        OptionsParser.ParseSpectrumConfig();
+    }
+}
+bool isValidFile(const std::string& filename) {
+    std::ifstream const file(filename);
+    return file.good();
 }
 
 END_ANALLAT_NAMESPACE

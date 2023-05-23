@@ -1,0 +1,10 @@
+{
+  "Isospin": 1,
+  "Spin": 1.0,
+  "Particle": "PION",
+  "Author_name": "SPAUL",
+  "Input_corrfile": ["TEST_CORR"],
+  "Input_vecfile": ["TEST_VEC"],
+  "Reweighting_facfile": ["RW_FILE"],
+  "Momenta": [[0,0,0]]
+}
