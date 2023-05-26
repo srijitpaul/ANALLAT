@@ -1,9 +1,10 @@
-#ifndef TMP_H_
-#define TMP_H_
+#ifndef TMP_HPP
+#define TMP_HPP
+#include <cstddef>
 
 namespace tmp
 {
-  int add(int abc, int def);
+    int add(int abc, int def);
 }
 
-#endif  // TMP_H_
+#endif  // TMP_HPP

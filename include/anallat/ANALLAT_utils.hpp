@@ -5,9 +5,8 @@
 
 BEGIN_ANALLAT_NAMESPACE
 
-bool isValidFile(const std::string& filename);
 //----------ANALLAT_utils.cpp---------------//
-void InitializeOptions(int argc, char **argv);
+//void InitializeOptions(int argc, char **argv);
 
 //void MonteCarloOptions(int argc, char ** argv);
 
@@ -20,6 +19,8 @@ void InitializeOptions(int argc, char **argv);
 //void initializeANALLAT();
 
 //void finalizeANALLAT();
+
+bool isValidFile(const std::string& filename);
 
 END_ANALLAT_NAMESPACE
 

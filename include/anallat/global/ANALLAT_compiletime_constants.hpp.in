@@ -1,12 +1,11 @@
 #ifndef ANALLAT_COMPILETIME_CONSTANTS_HPP
 #define ANALLAT_COMPILETIME_CONSTANTS_HPP
 
-namespace anallat {
 
-    //======== Compile time constants =========//
-    constexpr size_t Nresamples = @NRESAMPLES@; //NOLINT
-    constexpr size_t Tdim = @TDIM@; //NOLINT
+//======== Compile time constants =========//
+constexpr size_t Nresamples = @NRESAMPLES@; //NOLINT
+constexpr size_t Tdim = @TDIM@; //NOLINT
 
-}
+
 
 #endif  // ANALLAT_COMPILETIME_CONSTANTS_HPP

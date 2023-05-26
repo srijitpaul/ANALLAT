@@ -9,24 +9,25 @@
 //========= SpectrumOptions ============//
 struct SpectrumOptions{
 
-    int Isospin;
-    float Spin;
-    std::string                      Author_name;
-    std::string                      Particle;
-    std::vector<std::string>         Input_corrfile;
-    std::vector<std::string>         Input_vecfile;
-    std::vector<std::string>         Reweighting_facfile;
-    std::vector<std::array<int, 3>>  Momenta;
- //   std::vector<std::array<int, 3>>  ratio_fit_momenta_1;
- //   std::vector<std::array<int, 3>>  ratio_fit_momenta_2;
- //   std::vector<std::string>         irrep;
+    int                             Isospin;
+    float                           Spin;
+    std::string                     AuthorName;
+    std::string                     Particle;
+    std::vector<std::string>        InputCorrFile;
+    std::vector<std::string>        InputVecFile;
+    std::vector<std::string>        ReweightingFacFile;
+    std::vector<std::array<int, 3>> Momenta;
+    std::vector<std::string>        Irrep;
+    size_t                          Ninterp;
+    size_t                          Nsrc;
+    std::vector<size_t>             Tmin;
+    std::vector<size_t>             Tmax;
+
+//   std::vector<std::array<int, 3>>  ratio_fit_momenta_1;
+//   std::vector<std::array<int, 3>>  ratio_fit_momenta_2;
 //    extern std::vector<std::string>         ratio_fit_irreps_1;
 //    extern std::vector<std::string>         ratio_fit_irreps_2;
 //    extern size_t                           Tdim;
-//    extern size_t                           Ninterp;
-//    extern size_t                           Nsrc;
-//    extern std::vector<size_t>              t_min;
-//    extern std::vector<size_t>              t_max;
 //    extern double                           mass_1;
 //    extern double                           mass_2;
 //    extern double                           err_mass_1;
@@ -41,5 +42,6 @@ struct SpectrumOptions{
 
 };
 
-NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(SpectrumOptions, Isospin, Spin, Author_name, Particle, Input_corrfile, Input_vecfile, Reweighting_facfile, Momenta);
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(SpectrumOptions, Isospin, Spin, AuthorName, Particle, InputCorrFile, InputVecFile,
+                                   ReweightingFacFile, Momenta, Irrep, Ninterp, Nsrc, Tmin, Tmax);
 #endif

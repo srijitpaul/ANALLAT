@@ -1,13 +1,13 @@
 {
-  "verbosity": 1,
-  "project": "Test",
-  "project_year": 2023,
-  "description": "Analyzing Test QCD data",
-  "dimensions": 4,
-  "lattice": [32,32,32,64],
-  "theory": "QCD",
-  "analysis_type": "Spectrum",
-  "method": "Blocking",
-  "input_path": "/user/home",
-  "output_path": "/user/home"
+  "Verbosity": 1,
+  "Project": "Test",
+  "ProjectYear": 2023,
+  "Description": "Analyzing Test QCD data",
+  "Dimensions": 4,
+  "Lattice": [32, 32, 32, 64],
+  "Theory": "QCD",
+  "AnalysisType": "Spectrum",
+  "Method": "Blocking",
+  "InputPath": "/user/home",
+  "OutputPath": "/user/home"
 }

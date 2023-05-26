@@ -34,25 +34,21 @@
 //======== Preprocessor macros =========//
 #include "global/ANALLAT_macros.hpp"
 
+BEGIN_ANALLAT_NAMESPACE
+
 //======== User Input Options ==========//
-BEGIN_OPTIONS_NAMESPACE
 
 #include "global/ANALLAT_global_options.hpp"
 #include "global/ANALLAT_montecarlo_options.hpp"
 #include "global/ANALLAT_spectrum_options.hpp"
 
-const size_t ALIGNMENT_SIZE = 128;
+//const size_t ALIGNMENT_SIZE = 128;
 
-using anallat_param_t = struct {
-    struct GlobalOptions GlobalOpt;
-    struct MonteCarloOptions MCOpt;
-    struct SpectrumOptions SpectrumOpt;
-} __attribute__((aligned(ALIGNMENT_SIZE)));
+//extern const GlobalOptions GlobalOpt;//NO_LNT
+//static inline MonteCarloOptions MCOpt;//NO_LNT
+//static inline SpectrumOptions SpectrumOpt;//NO_LNT
 
-extern anallat_param_t anallat_global_param ;//NOLINT
-END_OPTIONS_NAMESPACE
 
-BEGIN_ANALLAT_NAMESPACE
 //======== Containers ===============//
 //#include <global/ANALLAT_xtensor.h>
 

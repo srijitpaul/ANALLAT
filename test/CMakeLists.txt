@@ -41,7 +41,7 @@ foreach(file ${test_sources})
   else()
     set(${CMAKE_PROJECT_NAME}_TEST_LIB ${CMAKE_PROJECT_NAME})
   endif()
-
+  verbose_message("Linking against ${${CMAKE_PROJECT_NAME}_TEST_LIB}")
   if(${CMAKE_PROJECT_NAME}_USE_GTEST)
     find_package(GTest REQUIRED)
 
@@ -68,7 +68,6 @@ foreach(file ${test_sources})
   else()
     message(FATAL_ERROR "Unknown testing library. Please setup your desired unit testing library by using `target_link_libraries`.")  
   endif()
-
   #
   # Add the unit tests
   #
